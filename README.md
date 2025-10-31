@@ -1,8 +1,8 @@
 # 🌐 MERN Contact Management System
 
-A **full-stack MERN (MongoDB, Express, React, Node.js)** application that allows users to manage contacts with full **CRUD (Create, Read, Update, Delete)** functionality.
+A **full-stack MERN (MongoDB, Express, React, Node.js)** web application that enables users to manage their contacts efficiently with complete **CRUD (Create, Read, Update, Delete)** operations.
 
-The system includes dynamic country management, form validations, and a user-friendly interface connected to **MongoDB Atlas**.
+The system features **dynamic country management**, real-time form validation, and a clean, responsive UI — all powered by **MongoDB Atlas**.
 
 ---
 
@@ -14,79 +14,71 @@ The system includes dynamic country management, form validations, and a user-fri
 
 ## 📁 Project Folder Structure
 
+```bash
 MernContactApp/
 │
-├── backend/ # Node.js + Express + MongoDB backend
-│ ├── controllers/ # Handles business logic
-│ ├── models/ # Database schemas (Mongoose)
-│ ├── routes/ # API routes for Countries & Contacts
-│ ├── server.js # Entry point for the backend
-│ ├── package.json # Backend dependencies
-│ └── .env # Environment variables (Mongo URI)
+├── backend/                   # Node.js + Express + MongoDB backend
+│   ├── controllers/            # Business logic for contacts & countries
+│   ├── models/                 # Mongoose schemas
+│   ├── routes/                 # API route handlers
+│   ├── server.js               # Entry point for backend
+│   ├── package.json            # Backend dependencies
+│   └── .env                    # Environment variables (Mongo URI)
 │
-├── frontend/ # React frontend (user interface)
-│ ├── src/
-│ │ ├── api/ # Axios API calls
-│ │ ├── components/ # React components (Form, List)
-│ │ ├── App.js # Main app file
-│ │ ├── App.css # Styling
-│ │ └── index.js # React entry point
-│ ├── public/
-│ └── package.json # Frontend dependencies
+├── frontend/                  # React frontend (user interface)
+│   ├── src/
+│   │   ├── api/                # Axios API calls
+│   │   ├── components/         # Reusable UI components (Form, List)
+│   │   ├── App.js              # Root component
+│   │   ├── App.css             # Styling
+│   │   └── index.js            # React entry point
+│   ├── public/
+│   └── package.json            # Frontend dependencies
 │
-└── ss/ # Screenshots and media
-└── UI.png
+└── ss/                        # Screenshots and visuals
+    └── UI.png
+⚙️ Technologies Used
+🖥️ Frontend
+React.js
 
-yaml
+Axios
+
+HTML5 / CSS3
+
+JavaScript (ES6)
+
+⚙️ Backend
+Node.js
+
+Express.js
+
+Mongoose
+
+dotenv
+
+CORS
+
+MongoDB Atlas (Cloud Database)
+
+🚀 Features
+✅ Add, update, and delete contacts
+✅ Inline validation for required fields
+✅ Support for multiple phone numbers (Home, Work, Alternate)
+✅ Dynamically add new countries directly from the form
+✅ Fetch and display existing countries from MongoDB
+✅ Responsive, modern UI with smooth user experience
+
+🧩 Environment Variables
+Create a .env file inside the backend folder and add:
+
+env
 Copy code
-
----
-
-## ⚙️ Technologies Used
-
-### 🖥️ Frontend
-- React.js
-- Axios
-- HTML5 / CSS3
-- JavaScript (ES6)
-
-### ⚙️ Backend
-- Node.js
-- Express.js
-- Mongoose
-- dotenv
-- CORS
-- MongoDB Atlas (Cloud Database)
-
----
-
-## 🚀 Features
-
-✅ Add, update, and delete contacts  
-✅ Inline validation for required fields  
-✅ Supports multiple phone numbers (Home, Work, Alternate)  
-✅ Add new countries dynamically from the form  
-✅ Live country dropdown from MongoDB Atlas  
-✅ Responsive, modern UI built with React  
-
----
-
-## 🧩 Environment Variables
-
-Create a `.env` file in the **backend** folder with:
-
 PORT=5000
 MONGO_URI=your_mongodb_atlas_connection_string
-
-yaml
+🧭 How to Run the Project Locally
+1️⃣ Clone the Repository
+bash
 Copy code
-
----
-
-## 🧭 How to Run the Project Locally
-
-### 1️⃣ Clone the repository
-```bash
 git clone https://github.com/your-username/MernContactApp.git
 cd MernContactApp
 2️⃣ Start the Backend
@@ -95,7 +87,7 @@ Copy code
 cd backend
 npm install
 npx nodemon server.js
-Backend runs on: http://localhost:5000
+Runs at → http://localhost:5000
 
 3️⃣ Start the Frontend
 Open another terminal:
@@ -105,19 +97,18 @@ Copy code
 cd frontend
 npm install
 npm start
-Frontend runs on: http://localhost:3000
+Runs at → http://localhost:3000
 
-🧪 Testing via Postman
+🧪 API Endpoints (for Postman Testing)
 Method	Endpoint	Description
 GET	/api/countries	Fetch all countries
 POST	/api/countries	Add a new country
 GET	/api/contacts	Fetch all contacts
 POST	/api/contacts	Add a new contact
-PUT	/api/contacts/:id	Update contact
-DELETE	/api/contacts/:id	Delete contact
+PUT	/api/contacts/:id	Update a contact
+DELETE	/api/contacts/:id	Delete a contact
 
 🧠 Developer
-Name: Dimuthu Shalinda
-University: University of Jaffna – Faculty of Engineering
-Department: Computer Engineering
-
+👨‍💻 Name: Dimuthu Shalinda
+🎓 University: University of Jaffna – Faculty of Engineering
+🏫 Department: Computer Engineering
