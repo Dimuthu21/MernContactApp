@@ -23,12 +23,12 @@ exports.addContact = async (req, res) => {
       email, countryId
     } = req.body;
 
-    // Assignment validations
+    
     if (!firstName || !lastName || !primaryMobile || !countryId) {
       return res.status(400).json({ message: "First name, last name, country, and mobile are required" });
     }
 
-    // Build and save
+   
     const contact = new Contact({
       firstName, lastName,
       addressLine1, addressLine2, city, postalCode,
@@ -40,7 +40,7 @@ exports.addContact = async (req, res) => {
 
     res.status(201).json({ message: "Contact saved successfully", data: contact });
   } catch (err) {
-    // Friendly duplicate error
+    
     if (err.code === 11000 && err.keyPattern && err.keyPattern.fullNameLower) {
       return res.status(400).json({ message: "A contact with this Name already exists" });
     }
@@ -54,7 +54,7 @@ exports.updateContact = async (req, res) => {
     const { id } = req.params;
     const updates = { ...req.body };
 
-    // If name parts are updating, enforce duplicate rule via unique index
+    
     const updated = await Contact.findOneAndUpdate(
       { _id: id },
       updates,
